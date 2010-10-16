@@ -10,6 +10,7 @@ $(document).ready(function(){
     window.open($(this).attr('href'));
     return false;
   });
+});
 
 //Google Analytics ------------------------------->
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -19,5 +20,3 @@ var pageTracker = _gat._getTracker("UA-2643450-5");
 pageTracker._trackPageview();
 } catch(err) {}
 // <-----------------------------------------------
-
-});
