@@ -9,6 +9,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem "rack", :version => "1.0.0"
 
+  config.frameworks -= [ :active_record ]
+
   config.time_zone = 'UTC'
   config.i18n.default_locale = 'pt-BR'
 end
