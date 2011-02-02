@@ -5,8 +5,7 @@
 
 <div id="center_form">
   <p><strong>Formulário de contato:</strong></p>
-  <% form_for :contact_info, @contact_info, :url => {:action => "contact"} do |f| %>
-    <%= f.error_messages %>
+  <%- form_for @contact_info, :as => :contact_info, :url => {:action => "contact"} do |f| %>
     <table>
       <tr>
         <td><span>Nome</span></td>
@@ -32,5 +31,5 @@
       </tr>
     </table><br />
     <div id="center_button"><%= f.submit 'Enviar' %></div>
-  <% end %>
+  <%- end %>
 </div>

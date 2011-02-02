@@ -1,4 +1,4 @@
-PousadaSantanna::Application.routes.draw do
+Pousadasantanna::Application.routes.draw do
   match '/' => 'static_content#index'
   match '/acomodacoes' => 'static_content#accommodation', :as => :accommodation, :method => 'get'
   match 'fale_conosco' => 'static_content#contact', :as => :contact, :method => 'get'
