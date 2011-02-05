@@ -25,7 +25,13 @@
         <a href="./localizacao">Localização</a>
         <a href="./fale_conosco">Fale Conosco</a>
       </div>
+
+      <%- flash.each do |type, message| %>
+        <%= javascript_tag "alert('#{message}')" %>
+      <% end -%>
+        
       <div id="content"><%= yield %></div>
+
       <div id="footer">
         <div id="address">
           <span><a href="./localizacao">Rua Major Vitoriano, 170, Centro - Roseira-SP</a></span>

@@ -6,5 +6,11 @@ class StaticContentController < ApplicationController
   def accommodation; end
   def gallery; end
   def localization; end
-  def contact; end
+  def contact_form; end
+
+  def contact
+    Notifier.contact(params[:contact_form]).deliver
+    flash[:notice] = 'Recebemos sua mensagem, em breve entraremos em contato.'
+    redirect_to root_url
+  end
 end
