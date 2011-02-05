@@ -1,0 +1,35 @@
+<h2>Fale conosco</h2><br />
+<p><strong>Telefone</strong>: (12) 3646-1282</p>
+<p><strong>Email</strong>: <a href="mailto:pousadasantanna@gmail.com">pousadasantanna@gmail.com</a></p>
+<br /><br /><br />
+
+<div id="center_form">
+  <p><strong>Formulário de contato:</strong></p>
+  <%- form_for :contact_form, :url => contact_path do |f| %>
+    <table>
+      <tr>
+        <td><span>Nome</span></td>
+        <td><span>Empresa</span></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.text_field :company %></td>
+      </tr>
+      <tr>
+        <td><span>E-mail</span></td>
+        <td><span>Telefone</span></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :email %></td>
+        <td><%= f.text_field :phone %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><span>Mensagem</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= f.text_area :message %></td>
+      </tr>
+    </table><br />
+    <div id="center_button"><%= f.submit 'Enviar' %></div>
+  <%- end %>
+</div>
