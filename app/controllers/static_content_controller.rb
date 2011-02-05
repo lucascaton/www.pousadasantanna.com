@@ -1,5 +1,5 @@
 class StaticContentController < ApplicationController
-  caches_page :index, :accommodation, :gallery, :localization, :contact_form
+  caches_page :index, :accommodation, :gallery, :localization
 
   def index; end
   def accommodation; end
@@ -10,6 +10,6 @@ class StaticContentController < ApplicationController
   def contact
     Notifier.contact(params[:contact_form]).deliver
     flash[:notice] = 'Recebemos sua mensagem, em breve entraremos em contato.'
-    redirect_to root_url
+    redirect_to contact_form_path
   end
 end
