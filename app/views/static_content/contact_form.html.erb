@@ -5,7 +5,7 @@
 
 <div id="center_form">
   <p><strong>Formulário de contato:</strong></p>
-  <%- form_for :contact_form, :url => contact_path do |f| %>
+  <%- form_for :contact_form, :url => contact_path, :method => :post do |f| %>
     <table>
       <tr>
         <td><span>Nome</span></td>
