@@ -10,8 +10,10 @@
     <p>Nome: <%=@name%></p>
     <p>E-mail: <%=@email%></p>
     <p>Telefone: <%=@phone%></p>
+    <br />
+    <p>Assunto: <%=@message_subject%></p>
     <p>Mensagem:</p>
     <br />
-    <div><%=@message%></div>
+    <div><%=@message.gsub(/\n/, '<br />').html_safe%></div>
   </body>
 </html>

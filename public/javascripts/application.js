@@ -1,16 +1,39 @@
-$(document).ready(function(){
+$(function(){
+  configExternalLink();
+  configPhotoGallery();
+  configMessageTextArea();
+});
+
+function configExternalLink(){
+  $(".external").click(function(){
+    window.open($(this).attr('href'));
+    return false;
+  });
+}
+
+function configPhotoGallery(){
   $('#photos').galleryView({
     panel_width:400,
     panel_height:300,
     frame_width:100,
     frame_height:100
   });
+}
 
-  $(".external").click(function(){
-    window.open($(this).attr('href'));
-    return false;
+function configMessageTextArea(){
+  $('#contact_form_message')
+  .focus(function(){
+    if($(this).val()=='Digite aqui sua mensagem...'){
+      $(this).css('color', '#222').val('');
+    }
+  })
+  .blur(function(){
+    if($(this).val()==''){
+      $(this).css('color', '#999').val('Digite aqui sua mensagem...');
+    }
   });
-});
+}
+
 
 //Google Analytics ------------------------------->
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
