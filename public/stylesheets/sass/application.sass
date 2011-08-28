@@ -13,7 +13,7 @@
   padding: 0
 
 body
-  background: url('../images/bg.jpg') no-repeat top center
+  background: url(/images/bg.jpg) no-repeat bottom center
   background-color: #08A9DD
   color: #333
   font-family: verdana, arial, helvetica, sans-serif
@@ -29,10 +29,11 @@ a
   &:hover
     color: #111
 
-span
-
 .center
   text-align: center
+
+.bold
+  font-weight: bold
 
 ul
   list-style-type: square
@@ -45,108 +46,83 @@ textarea
 #map
   width: 600px
   height: 400px
-  /*  overflow:hidden;
-  /*  border:none;
 
 #contact_form_message
   color: #999
 
-/*--------------------------------------------------
- * [div] Main
- *--------------------------------------------------
+#main
+  position: relative
+  min-width: 783px
+  margin: auto
 
-div
-  &#main
-    position: relative
-    min-width: 760px
-    margin: auto
-  &#nav
-    position: relative
-    margin: 330px auto 0px auto
-    text-align: center
-    clear: both
-    width: 720px
-    height: 30px
-    padding: 10px 0px
-    a
-      font-size: 1.5em
-      margin: 0px 15px
-      &:hover
-        border-bottom: 1px dotted #333
-  &#content
-    position: relative
-    height: 490px
-    width: 690px
-    margin: auto
-    padding: 30px 30px
-    font-size: 14px
-  &#center_photos
+#box_wrapper
+  margin: auto
+  width: 783px
+  padding: 30px
+  #box_top
+    height: 261px
+    background: url(/images/box_top.png) no-repeat bottom center
+  #box_center
+    background: url(/images/box_center.png) repeat-y center
+    #nav
+      text-align: center
+      clear: both
+      padding: 10px 0px
+      a
+        font-size: 1.5em
+        margin: 0px 15px
+        &:hover
+          border-bottom: 1px dotted #333
+    #content
+      padding: 15px 40px
+    #footer
+      margin: auto
+      padding-top: 20px
+    #address
+      text-align: center
+      margin: auto
+      border-top: 1px dotted #999
+      padding-top: 8px
+      span
+        font-size: 0.9em
+        line-height: 0px
+        padding: 0px 10px
+    #developed_by
+      padding: 30px 15px 10px 0px
+      width: 200px
+      height: 60px
+      float: right
+      a
+        display: block
+        width: 100%
+        height: 100%
+        background: url('../images/developed_by.png') left top
+        &:hover
+          background-position: left bottom
+  #box_bottom
+    color: #333
+    padding: 15px 40px
+    background: url(/images/box_bottom.png) no-repeat top center
+
+  #copyright
+    color: #FFF
+    padding: 10px 0px 0px 30px
+    font-size: 2em
+    text-shadow: 2px -1px #555
+
+  #center_photos
     text-align: center
     margin: auto
     width: 400px
-  &#center_map
+
+  #center_map
     text-align: center
     margin: auto
     width: 600px
-  &#center_form
+
+  #center_form
     margin: auto
     width: 525px
-  &#center_button
+
+  #center_button
     text-align: center
-  &#footer
-    position: relative
-    height: 140px
-    width: 760px
-    margin: auto
-    clear: both
-  &#address
-    position: relative
-    text-align: center
-    margin: auto
-    clear: both
-    border-top: 1px dotted #999
-    width: 720px
-    padding: 8px 0px
-    span
-      font-size: 0.9em
-      line-height: 0px
-      padding: 0px 10px
-  &#developed_by
-    position: relative
-    right: 5px
-    top: 20px
-    width: 200px
-    height: 60px
-    float: right
-    a
-      position: relative
-      display: block
-      width: 100%
-      height: 100%
-      background: url('../images/developed_by.png') left top
-      &:hover
-        background-position: left bottom
-
-/*--------------------------------------------------
- * [div] Nav
- *--------------------------------------------------
-
-/*--------------------------------------------------
- * [div] Content
- *--------------------------------------------------
-
-/*--------------------------------------------------
- * [div] Center
- *--------------------------------------------------
-
-/*--------------------------------------------------
- * [div] Footer
- *--------------------------------------------------
-
-/*--------------------------------------------------
- * [div] Address
- *--------------------------------------------------
-
-/*--------------------------------------------------
- * [div] Developed_by
- *--------------------------------------------------

@@ -1,37 +1,44 @@
 !!! XML
 !!! Strict
-%html{:lang => "pt-br", "xml:lang" => "pt-br", :xmlns => "http://www.w3.org/1999/xhtml"}
+%html{:lang => 'pt-br', 'xml:lang' => 'pt-br', :xmlns => 'http://www.w3.org/1999/xhtml'}
   %head
-    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
-    %meta{:content => "Lucas Cat\303\263n", :name => "author"}/
-    %meta{:content => "Pousada Santanna - Acomoda\303\247\303\265es em Roseira-SP.", :name => "description"}/
-    %meta{:content => "pousada, hotel, santanna, roseira, aparecida, guaratinguet\303\241", :name => "keywords"}/
-    %meta{:content => "Pousada Santanna", :name => "title"}/
-    %meta{:content => "http://www.pousadasantanna.com", :name => "url"}/
-    %meta{:content => "all", :name => "robots"}/
-    %meta{:content => "", :name => "verify-v1"}/
-    %meta{:content => "7 days", :name => "revisit-after"}/
+    %meta{:content => 'text/html;charset=UTF-8', 'http-equiv' => 'content-type'}/
+    %meta{:content => 'Lucas Catón', :name => 'author'}/
+    %meta{:content => 'Pousada Santanna - Acomodações em Roseira-SP.', :name => 'description'}/
+    %meta{:content => 'pousada, hotel, santanna, roseira, aparecida, guaratinguetá', :name => 'keywords'}/
+    %meta{:content => 'Pousada Santanna', :name => 'title'}/
+    %meta{:content => 'http://www.pousadasantanna.com', :name => 'url'}/
+    %meta{:content => 'all', :name => 'robots'}/
+    %meta{:content => '', :name => 'verify-v1'}/
+    %meta{:content => '7 days', :name => 'revisit-after'}/
     %title Pousada Santanna
     = stylesheet_link_tag 'galleryview', 'application'
     = javascript_include_tag 'jquery-1.5.min', 'rails', 'jquery.ie6blocker', 'jquery.timers-1.1.2', 'jquery.galleryview-1.1', 'application', 'validations'
     = csrf_meta_tag
   %body
     #main
-      #nav
-        %a{:href => "http://www.pousadasantanna.com/"} Página inicial
-        %a{:href => "./acomodacoes"} Acomodações
-        %a{:href => "./galeria"} Galeria
-        %a{:href => "./localizacao"} Localização
-        %a{:href => "./fale_conosco"} Fale Conosco
-      - flash.each do |type, message|
-        = javascript_tag "alert('#{message}')"
-      #content= yield
-      #footer
-        #address
-          %span
-            %a{:href => "./localizacao"} Rua Major Vitoriano, 170, Centro - Roseira-SP
-          %span (12) 3646-1282
-          %span
-            %a{:href => "mailto:pousadasantanna@gmail.com"} pousadasantanna@gmail.com
-        #developed_by
-          %a.external{:href => "http://www.lucascaton.com.br/"}
+      #box_wrapper
+        #box_top
+        #box_center
+          #nav
+            =link_to 'Página inicial', root_path
+            =link_to 'Acomodações', acomodacoes_path
+            =link_to 'Galeria', galeria_path
+            =link_to 'Localização', localizacao_path
+            =link_to 'Fale Conosco', contact_form_path
+          -flash.each do |type, message|
+            =javascript_tag "alert('#{message}')"
+          #content
+            =yield
+          #footer
+            #address
+              %span
+                %a{:href => './localizacao'} Rua Major Vitoriano, 170, Centro - Roseira-SP
+              %span (12) 3646-1282
+              %span
+                %a{:href => 'mailto:pousadasantanna@gmail.com'} pousadasantanna@gmail.com
+            #developed_by
+              %a.external{:href => 'http://www.lucascaton.com.br/'}
+        #box_bottom
+        #copyright
+          %span &copy; #{Date.today.year} Pousada Satanna
