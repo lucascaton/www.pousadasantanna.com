@@ -6,8 +6,8 @@
 .sass-cache/**/*
 README.html
 Session.vim
-db/*.sqlite3
 doc/api
+config/database.yml
 doc/app
 doc/rspec*
 log/*.log

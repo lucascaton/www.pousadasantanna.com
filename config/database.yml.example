@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: pousadasantanna_development
+  pool: 5
+  username:
+  password:
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: pousadasantann_test
+  pool: 5
+  username:
+  password:
+  host: localhost
+  port: 5432
