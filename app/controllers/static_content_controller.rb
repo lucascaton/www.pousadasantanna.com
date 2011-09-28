@@ -1,5 +1,5 @@
 class StaticContentController < ApplicationController
-  caches_page :index, :accommodation, :gallery, :localization
+  # caches_page :index, :accommodation, :gallery, :localization
 
   def index; end
   def accommodation; end
