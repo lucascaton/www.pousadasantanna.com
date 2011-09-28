@@ -1,0 +1,5 @@
+pt-BR:
+  enumerations:
+    photo_kind:
+      gallery: 'Galeria'
+      accommodation: 'Acomodações'
