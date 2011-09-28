@@ -1,6 +1,6 @@
 #photos_management
   -@grouped_photos.keys.each do |photo_kind|
-    %h1
+    %h2
       Fotos -
       =t "enumerations.photo_kind.#{photo_kind}"
     %table
@@ -20,7 +20,7 @@
     %br/
     %br/
 
-%h1 Enviar nova foto
+%h2 Enviar nova foto
 %br/
 =form_for @photo, :html => { :multipart => true } do |f|
   =field_set_tag do
