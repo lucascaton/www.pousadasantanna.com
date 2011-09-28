@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'haml'
+gem 'jquery-rails', '>= 1.0.12'
 gem 'paperclip', '~> 2.3'
 gem 'pg'
 gem 'rails', '3.0.10'

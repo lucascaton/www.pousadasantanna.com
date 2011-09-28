@@ -38,6 +38,9 @@ GEM
     haml (3.1.2)
     hpricot (0.8.4)
     i18n (0.5.0)
+    jquery-rails (1.0.14)
+      railties (~> 3.0)
+      thor (~> 0.14)
     linecache (0.43)
     mail (2.2.19)
       activesupport (>= 2.3.6)
@@ -94,6 +97,7 @@ DEPENDENCIES
   annotate
   haml
   hpricot
+  jquery-rails (>= 1.0.12)
   paperclip (~> 2.3)
   pg
   rails (= 3.0.10)
