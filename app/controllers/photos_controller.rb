@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   before_filter :authenticate
   before_filter :load_photos
+  layout 'admin'
 
   def index
     @photo = Photo.new
@@ -22,13 +23,6 @@ class PhotosController < ApplicationController
     @photo.destroy
     flash[:notice] = 'Foto removida com sucesso.'
     redirect_to photos_path
-  end
-
-  protected
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == 'admin' && password == 'zztott'
-    end
   end
 
   private
