@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'enumerate_it'
 gem 'haml'
 gem 'jquery-rails', '>= 1.0.12'
 gem 'paperclip', '~> 2.3'
