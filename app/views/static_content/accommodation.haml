@@ -5,12 +5,5 @@
 %br/
 #center_photos
   #photos
-    %img{:src => 'images/photos/tb_quarto4a.jpg', :'data-large' => 'images/photos/quarto4a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto4b.jpg', :'data-large' => 'images/photos/quarto4b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto5a.jpg', :'data-large' => 'images/photos/quarto5a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto5b.jpg', :'data-large' => 'images/photos/quarto5b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto6a.jpg', :'data-large' => 'images/photos/quarto6a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto6b.jpg', :'data-large' => 'images/photos/quarto6b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8a.jpg', :'data-large' => 'images/photos/quarto8a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8b.jpg', :'data-large' => 'images/photos/quarto8b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8c.jpg', :'data-large' => 'images/photos/quarto8c.jpg'}/
+    -@photos.each do |photo|
+      %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url(:thumb)}/

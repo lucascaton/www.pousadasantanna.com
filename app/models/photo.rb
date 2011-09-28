@@ -19,5 +19,5 @@ class Photo < ActiveRecord::Base
 
   has_attached_file :photo, :styles => { :thumb => '100x100>' }
 
-  has_enumeration_for :photo_kind, :create_helpers => true
+  has_enumeration_for :photo_kind, :create_helpers => true, :create_scopes => true
 end

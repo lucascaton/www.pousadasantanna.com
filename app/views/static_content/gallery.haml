@@ -3,28 +3,5 @@
   %br/
   %br/
   #photos
-    %img{:src => 'images/photos/tb_entrada1.jpg', :'data-large' => 'images/photos/entrada1.jpg'}/
-    %img{:src => 'images/photos/tb_entrada2.jpg', :'data-large' => 'images/photos/entrada2.jpg'}/
-    %img{:src => 'images/photos/tb_entrada3.jpg', :'data-large' => 'images/photos/entrada3.jpg'}/
-    %img{:src => 'images/photos/tb_sala1.jpg', :'data-large' => 'images/photos/sala1.jpg'}/
-    %img{:src => 'images/photos/tb_sala2.jpg', :'data-large' => 'images/photos/sala2.jpg'}/
-    %img{:src => 'images/photos/tb_sala3.jpg', :'data-large' => 'images/photos/sala3.jpg'}/
-    %img{:src => 'images/photos/tb_salao1.jpg', :'data-large' => 'images/photos/salao1.jpg'}/
-    %img{:src => 'images/photos/tb_salao2.jpg', :'data-large' => 'images/photos/salao2.jpg'}/
-    %img{:src => 'images/photos/tb_salao3.jpg', :'data-large' => 'images/photos/salao3.jpg'}/
-    %img{:src => 'images/photos/tb_salao4.jpg', :'data-large' => 'images/photos/salao4.jpg'}/
-    %img{:src => 'images/photos/tb_quarto4a.jpg', :'data-large' => 'images/photos/quarto4a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto4b.jpg', :'data-large' => 'images/photos/quarto4b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto5a.jpg', :'data-large' => 'images/photos/quarto5a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto5b.jpg', :'data-large' => 'images/photos/quarto5b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto6a.jpg', :'data-large' => 'images/photos/quarto6a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto6b.jpg', :'data-large' => 'images/photos/quarto6b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8a.jpg', :'data-large' => 'images/photos/quarto8a.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8b.jpg', :'data-large' => 'images/photos/quarto8b.jpg'}/
-    %img{:src => 'images/photos/tb_quarto8c.jpg', :'data-large' => 'images/photos/quarto8c.jpg'}/
-    %img{:src => 'images/photos/tb_cozinha1.jpg', :'data-large' => 'images/photos/cozinha1.jpg'}/
-    %img{:src => 'images/photos/tb_cozinha2.jpg', :'data-large' => 'images/photos/cozinha2.jpg'}/
-    %img{:src => 'images/photos/tb_cozinha3.jpg', :'data-large' => 'images/photos/cozinha3.jpg'}/
-    %img{:src => 'images/photos/tb_quintal1.jpg', :'data-large' => 'images/photos/quintal1.jpg'}/
-    %img{:src => 'images/photos/tb_quintal2.jpg', :'data-large' => 'images/photos/quintal2.jpg'}/
-    %img{:src => 'images/photos/tb_quintal3.jpg', :'data-large' => 'images/photos/quintal3.jpg'}/
+    -@photos.each do |photo|
+      %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url(:thumb)}/

@@ -2,8 +2,15 @@ class StaticContentController < ApplicationController
   # caches_page :index, :accommodation, :gallery, :localization
 
   def index; end
-  def accommodation; end
-  def gallery; end
+
+  def accommodation
+    @photos = Photo.accommodation
+  end
+
+  def gallery
+    @photos = Photo.gallery
+  end
+
   def localization; end
   def contact_form; end
 
