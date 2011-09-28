@@ -1,4 +1,3 @@
-
 !!! XML
 !!! Strict
 %html{:lang => 'pt-br', 'xml:lang' => 'pt-br', :xmlns => 'http://www.w3.org/1999/xhtml'}
@@ -13,6 +12,7 @@
       #box_wrapper
         #box_top.center
           %h1 Pousada Santanna - Admin
+          .right=link_to '→ Ir para o site', root_path
         #box_center
           -if flash.present?
             .flash
