@@ -12,11 +12,10 @@ function configExternalLink(){
 }
 
 function configPhotoGallery(){
-  $('#photos').galleryView({
-    panel_width:400,
-    panel_height:300,
-    frame_width:100,
-    frame_height:100
+  $('img[data-large]').touchGallery({
+    getSource: function() { 
+      return $(this).attr('data-large');
+    }
   });
 }
 
@@ -33,7 +32,6 @@ function configMessageTextArea(){
     }
   });
 }
-
 
 //Google Analytics ------------------------------->
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
