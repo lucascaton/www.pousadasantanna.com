@@ -1,25 +1,29 @@
 #photos_management
-  -@grouped_photos.keys.each do |photo_kind|
-    %h2
-      Fotos -
-      =t "enumerations.photo_kind.#{photo_kind}"
-    %table
-      %tr
-        %th Foto
-        %th Código
-        %th Criada em
-        %th
-      -@grouped_photos[photo_kind].each do |photo|
+  -if @grouped_photos.empty?
+    %br/
+    Nenhuma foto cadastrada.
+  -else
+    -@grouped_photos.keys.each do |photo_kind|
+      %h2
+        Fotos -
+        =t "enumerations.photo_kind.#{photo_kind}"
+      %table
         %tr
-          %td
-            %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url}/
-          %td.center=photo.id
-          %td=l photo.created_at
-          %td=link_to 'Remover', photo, :confirm => 'Você tem certeza?', :method => :delete
-    %br/
-    %br/
-    %br/
-    %br/
+          %th Foto
+          %th Código
+          %th Criada em
+          %th
+        -@grouped_photos[photo_kind].each do |photo|
+          %tr
+            %td
+              %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url}/
+            %td.center=photo.id
+            %td=l photo.created_at
+            %td=link_to 'Remover', photo, :confirm => 'Você tem certeza?', :method => :delete
+  %br/
+  %br/
+  %br/
+  %br/
 
 %h2 Enviar nova foto
 %br/
