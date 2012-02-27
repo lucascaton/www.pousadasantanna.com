@@ -11,7 +11,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: pousadasantann_test
+  database: pousadasantanna_test
   pool: 5
   username:
   password:
