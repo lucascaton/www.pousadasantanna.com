@@ -11,6 +11,5 @@ gem 'sass'
 group :development do
   gem 'annotate'
   gem 'hpricot'
-  gem 'ruby-debug'
   gem 'ruby_parser'
 end
