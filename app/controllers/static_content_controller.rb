@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class StaticContentController < ApplicationController
   # caches_page :index, :accommodation, :gallery, :localization
 
