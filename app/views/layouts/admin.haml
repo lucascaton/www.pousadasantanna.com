@@ -5,8 +5,7 @@
     %meta{:content => 'text/html;charset=UTF-8', 'http-equiv' => 'content-type'}/
     %title Pousada Santanna - Admin
     =stylesheet_link_tag 'admin'
-    =javascript_include_tag 'vendor/jquery.min', 'vendor/jquery_ujs', 'vendor/jquery.touch-gallery-1.0.0.min', 'vendor/jquery.ie6blocker'
-    =javascript_include_tag 'application'
+    =favicon_link_tag
     =csrf_meta_tag
   %body
     #main
@@ -21,3 +20,5 @@
                 =flash.first.last
           #content
             =yield
+
+    =javascript_include_tag 'application'

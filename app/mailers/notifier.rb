@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
   default :from => 'contato@pousadasantanna.com'
- 
+
   def contact(contact_form)
     @company         = contact_form[:company]
     @name            = contact_form[:name]
@@ -12,6 +12,7 @@ class Notifier < ActionMailer::Base
     subject = "Mensagem enviada pelo site "
     subject << (@message_subject.blank? ? "por #{@name}" : "- \"#{@message_subject}\"")
 
-    mail :to => 'pousadasantanna@gmail.com', :subject => subject
+    mail_to = Rails.env.production? ? 'pousadasantanna@gmail.com' : 'lucascaton@gmail.com'
+    mail :to => mail_to, :subject => subject, reply_to: @email
   end
 end

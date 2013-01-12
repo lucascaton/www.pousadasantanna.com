@@ -13,6 +13,10 @@
 #
 
 class Photo < ActiveRecord::Base
+  extend EnumerateIt
+
+  attr_accessible :photo_kind, :photo
+
   validates_presence_of :photo_file_name
 
   validates_inclusion_of :photo_kind, :in => PhotoKind.list

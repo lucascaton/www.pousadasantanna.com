@@ -3,19 +3,18 @@
 %html{:lang => 'pt-br', 'xml:lang' => 'pt-br', :xmlns => 'http://www.w3.org/1999/xhtml'}
   %head
     %meta{:content => 'text/html;charset=UTF-8', 'http-equiv' => 'content-type'}/
-    %meta{:content => 'Lucas Catón', :name => 'author'}/
+    %meta{:content => 'Lucas Caton', :name => 'author'}/
     %meta{:content => 'Pousada Santanna - Acomodações em Roseira-SP.', :name => 'description'}/
-    %meta{:content => 'pousada, hotel, santanna, roseira, aparecida, guaratinguetá', :name => 'keywords'}/
+    %meta{:content => 'pousada, hotel, santanna, roseira, aparecida, guaratinguetá, pindamonhangaba, vale do paraíba', :name => 'keywords'}/
     %meta{:content => 'Pousada Santanna', :name => 'title'}/
     %meta{:content => 'http://www.pousadasantanna.com', :name => 'url'}/
     %meta{:content => 'all', :name => 'robots'}/
     %meta{:content => '', :name => 'verify-v1'}/
     %meta{:content => '7 days', :name => 'revisit-after'}/
     %title Pousada Santanna
-    =stylesheet_link_tag 'application'
-    =javascript_include_tag 'vendor/jquery.min', 'vendor/jquery_ujs', 'vendor/jquery.touch-gallery-1.0.0.min', 'vendor/jquery.ie6blocker'
-    =javascript_include_tag 'validations', 'application'
-    =csrf_meta_tag
+    =stylesheet_link_tag 'application', media: 'all'
+    =favicon_link_tag
+    =csrf_meta_tags
   %body
     #main
       #box_wrapper
@@ -43,3 +42,17 @@
         #box_bottom
         #copyright
           %span &copy; #{Date.today.year} Pousada Satanna
+
+    =javascript_include_tag 'application'
+    / Google Analytics
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2643450-5']);
+      _gaq.push(['_setDomainName', 'lucasealine.com.br']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

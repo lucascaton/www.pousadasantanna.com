@@ -26,7 +26,8 @@ class PhotosController < ApplicationController
   end
 
   private
+
   def load_photos
-    @grouped_photos = Photo.all.group_by &:photo_kind
+    @grouped_photos = Photo.all.group_by(&:photo_kind)
   end
 end

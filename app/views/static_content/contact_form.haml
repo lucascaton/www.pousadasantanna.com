@@ -12,7 +12,7 @@
 #center_form
   %p
     %strong Formulário de contato:
-  - form_for :contact_form, :url => contact_path, :method => :post do |f|
+  =form_for :contact_form, :url => contact_path, :method => :post do |f|
     %table
       %tr
         %td
@@ -39,4 +39,4 @@
       %tr
         %td{:colspan => "2"}= f.text_area :message, :value => 'Digite aqui sua mensagem...'
     %br/
-    #center_button= f.submit 'Enviar'
+    #center_button=f.submit 'Enviar', disable_with: 'Enviando...'
