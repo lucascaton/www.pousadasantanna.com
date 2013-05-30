@@ -1,22 +1,22 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'enumerate_it'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'pg'
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 
 group :development do
   gem 'annotate'
   gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'thin'
 end
 
 group :development, :test do
-  gem 'pry'
   gem 'awesome_print'
+  gem 'pry-meta'
 end
 
 group :assets do
