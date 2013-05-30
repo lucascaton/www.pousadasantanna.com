@@ -1,5 +1,5 @@
 #! /bin/bash
 
-kill `cat /var/www/pousadasantanna/tmp/pids/unicorn.pid`
+kill `tmp/pids/unicorn.pid`
 sleep 5
-cd /var/www/pousadasantanna && bundle exec unicorn -c /var/www/pousadasantanna/config/unicorn.rb -E production -D
+bundle exec unicorn -c config/unicorn.rb -E production -D
