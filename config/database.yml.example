@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: pousadasantanna_production
+  database: pousadasantanna
   pool: 5
   username: postegres
   password:
