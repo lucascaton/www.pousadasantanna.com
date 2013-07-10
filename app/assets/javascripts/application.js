@@ -20,7 +20,7 @@ function configExternalLink(){
 
 function configPhotoGallery(){
   $('img[data-large]').touchGallery({
-    getSource: function() {
+    getSource: function(){
       return $(this).attr('data-large');
     }
   });
