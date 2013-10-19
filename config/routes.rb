@@ -4,8 +4,6 @@ PousadaSantanna::Application.routes.draw do
 
   root to: 'pages#index'
 
-  resources :photos
-
   get  '/acomodacoes'  => 'pages#accommodation'
   get  '/fale_conosco' => 'pages#contact_form', as: :contact_form
   post '/contact'      => 'pages#contact'
