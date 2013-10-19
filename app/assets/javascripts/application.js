@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery.touch-gallery-1.0.0.min
-//= require jquery.ie6blocker
+//= require turbolinks
 //= require_tree .
 
 $(function(){
@@ -12,7 +11,7 @@ $(function(){
 });
 
 function configExternalLink(){
-  $(".external").click(function(){
+  $('.external').click(function(){
     window.open($(this).attr('href'));
     return false;
   });

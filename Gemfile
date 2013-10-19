@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
+gem 'rails', '4.0.0'
+
+gem 'coffee-rails', '~> 4.0.0'
 gem 'enumerate_it'
 gem 'haml-rails'
+gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'pg'
-gem 'rails', '3.2.13'
+gem 'sass-rails', '~> 4.0.0'
+gem 'therubyracer', platforms: :ruby
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'annotate'
@@ -21,11 +28,4 @@ end
 
 group :production do
   gem 'unicorn'
-end
-
-group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'sass-rails', '~> 3.2.3'
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.0.3'
 end

@@ -1,4 +1,4 @@
 /*
  *= require_self
- *= require sass/application
+ *= require_tree .
  */
