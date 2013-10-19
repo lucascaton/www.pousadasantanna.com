@@ -26,8 +26,10 @@
             =link_to 'Galeria', galeria_path
             =link_to 'Localização', localizacao_path
             =link_to 'Fale Conosco', contact_form_path
-          -flash.each do |type, message|
-            =javascript_tag "alert('#{message}')"
+
+            %p.notice= notice
+            %p.alert= alert
+
           #content
             =yield
           #footer
