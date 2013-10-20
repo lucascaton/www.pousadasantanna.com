@@ -1,9 +1,0 @@
-%p.center
-  A
-  %strong Pousada Santana
-  dispõe de acomodações para um total de 21 pessoas. São quartos econômicos, todos com TV e Internet via Wi-fi. Situada na pacata cidade de Roseira, à 9km do centro turistico de Aparecida-SP, em ótima localização para empresas, à 100m da Rodovia Pres. Dutra, com estacionamento próprio para autos e caminhões.
-%br/
-#center_photos
-  #photos
-    -@photos.each do |photo|
-      %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url}/

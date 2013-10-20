@@ -2,3 +2,12 @@
  *= require_self
  *= require_tree .
  */
+
+.center {
+  text-align:center;
+  margin:auto;
+}
+
+#form_contact_us {
+  margin-top: 50px;
+}

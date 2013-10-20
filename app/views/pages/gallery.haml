@@ -1,7 +1,0 @@
-#center_photos
-  %h2 Galeria de fotos
-  %br/
-  %br/
-  #photos
-    -@photos.each do |photo|
-      %img{:src => photo.photo.url(:thumb), :'data-large' => photo.photo.url}/

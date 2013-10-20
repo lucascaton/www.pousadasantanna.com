@@ -12,6 +12,7 @@ ActiveAdmin.register Photo do
     column('Foto') { |photo| link_to image_tag(photo.photo.url(:thumb)), admin_photo_path(photo) }
     column('Arquivo') { |photo| link_to photo.photo_file_name, admin_photo_path(photo) }
     column('Tipo') { |photo| photo.photo_kind_humanize }
+    column('Última atualização') { |photo| l photo.updated_at }
 
     default_actions
   end

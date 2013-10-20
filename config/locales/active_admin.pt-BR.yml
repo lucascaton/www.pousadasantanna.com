@@ -71,10 +71,12 @@ pt-BR:
       errors:
         empty_text: "O comentário não foi salvo porque o texto estava vazio."
     devise:
-      login:
-        title: "Conta"
+      email:
+        title: "Email"
         remember_me: "Lembrar da senha"
         submit: "Entrar"
+      password:
+        title: "Senha"
       reset_password:
         title: "Esqueceu sua senha?"
         submit: "Reinicie minha senha"

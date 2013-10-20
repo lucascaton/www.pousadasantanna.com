@@ -1,0 +1,27 @@
+%section.block#contact
+  .container
+    .row
+      .offset2.span8
+        %h4.headline Fale conosco
+
+        %p.headline-caption
+          Rua Major Vitoriano, 170, Centro - Roseira-SP
+        %p.headline-caption
+          (12) 3646-1282 /
+          %a{:href => 'mailto:pousadasantanna@gmail.com'} pousadasantanna@gmail.com
+
+        #form_contact_us
+          %h4.headline Ou nos envie uma mensagem:
+
+          =form_for :message, url: messages_path, method: :post, html: { class: 'form-horizontal'} do |f|
+            -@form_fields.each do |fields|
+              .control-group
+                %label.control-label{ for: "input#{fields[:title]}" }= fields[:title]
+                .controls
+                  -if fields[:type] == :text_field
+                    = f.text_field fields[:field], placeholder: fields[:placeholder]
+                  -elsif fields[:type] == :text_area
+                    = f.text_area fields[:field], rows: 5, placeholder: fields[:placeholder]
+            .control-group
+              .controls
+                %button.btn.rounded{type: 'submit'} Enviar

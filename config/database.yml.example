@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: pousadasantanna_development
+  database: pousada_santanna_development
   pool: 5
   username:
   password:
@@ -11,7 +11,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: pousadasantanna_test
+  database: pousada_santanna_test
   pool: 5
   username:
   password:
@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: pousadasantanna
+  database: pousada_santanna
   pool: 5
   username: postegres
   password:
