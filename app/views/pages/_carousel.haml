@@ -1,21 +1,18 @@
-%section.block{id: id}
-  .container
-    .row
-      .offset2.span8
-        %h4.headline= title
+%h2= title
+%br
 
-        .carousel.slide{ id: "#{id}_carousel" }
-          %ol.carousel-indicators
-            %li.active{"data-slide-to" => 0, "data-target" => "##{id}_carousel"}
-            -1.upto(photos.count - 1) do |n|
-              %li{"data-slide-to" => n, "data-target" => "##{id}_carousel"}
+.carousel.slide{ id: "#{id}_carousel" }
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => 0, "data-target" => "##{id}_carousel"}
+    -1.upto(photos.count - 1) do |n|
+      %li{"data-slide-to" => n, "data-target" => "##{id}_carousel"}
 
-          .carousel-inner
-            -photos.each do |photo|
-              -if photo == photos.first
-                .active.item= image_tag photo.photo.url
-              -else
-                .item= image_tag photo.photo.url, class: 'center'
+  .carousel-inner
+    -photos.each do |photo|
+      -if photo == photos.first
+        .active.item= image_tag photo.photo.url
+      -else
+        .item= image_tag photo.photo.url, class: 'center'
 
-          %a.carousel-control.left{"data-slide" => "prev", href: "##{id}_carousel"} ‹
-          %a.carousel-control.right{"data-slide" => "next", href: "##{id}_carousel"} ›
+  %a.carousel-control.left{"data-slide" => "prev", href: "##{id}_carousel"} ‹
+  %a.carousel-control.right{"data-slide" => "next", href: "##{id}_carousel"} ›

@@ -19,51 +19,62 @@
     = favicon_link_tag 'favicon.ico', rel: 'shortcut icon'
 
   %body
-    %section.hero
-      .container
-        %nav.navbar
-          .navbar-inner
-            .container
-              %a.brand{href: '/'} Pousada Santanna
-              %ul.nav
-                %li.active
-                  %a.scroll{href: '#about_us'} Sobre a pousada
-                %li.active
-                  %a.scroll{href: '#gallery'} Galeria
-                %li.active
-                  %a.scroll{href: '#accommodation'} Acomodações
-                %li.active
-                  %a.scroll{href: '#contact'} Fale Conosco
-                %li.active
-                  %a.scroll{href: '#localization'} Localização
-        %article.marketing.row
-          .offset2.span8
-            %h1.headline Segurança, tranquilidade e ambiente familiar.
-            %h4 Seja bem-vindo à melhor pousada da região.
+    .container-fluid
+      .row-fluid
+        .span10.offset1
+          .navbar.navbar-fluid-top
+            .navbar-inner
+              .container-fluid
+                %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+                  %span.icon-bar
+                  %span.icon-bar
+                  %span.icon-bar
+                %a.brand{href: '/'} Pousada Santanna
 
-    - if flash.any?
-      .container
-        %br
-        = bootstrap_flash
+                .container.nav-collapse
+                  %ul.nav
+                    %li
+                      %a.scroll{href: '#about_us'} Sobre a pousada
+                    %li
+                      %a.scroll{href: '#gallery'} Galeria
+                    %li
+                      %a.scroll{href: '#accommodation'} Acomodações
+                    %li
+                      %a.scroll{href: '#contact'} Fale Conosco
+                    %li
+                      %a.scroll{href: '#localization'} Localização
+          - if flash.any?
+            .row-fluid
+              .span12
+                = bootstrap_flash
 
-    = yield
 
-    %footer
-      .container
-        %p.brand
-          &copy; #{Date.today.year} Pousada Satanna
+      .row-fluid
+        .span8.offset2
+          .center
+            #image_header= link_to image_tag('header.png'), root_path
 
-    = javascript_include_tag 'application'
+            .well
+              %h2.headline Segurança, tranquilidade e ambiente familiar.
+              %h4 Seja bem-vindo à melhor pousada da região.
 
-    / Google Analytics
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-2643450-5']);
-      _gaq.push(['_setDomainName', 'pousadasantanna.com']);
-      _gaq.push(['_trackPageview']);
+          = yield
 
-      (function(){
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+          %footer
+            %p
+              &copy; #{Date.today.year} Pousada Satanna
+
+  = javascript_include_tag 'application'
+
+  / Google Analytics
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2643450-5']);
+    _gaq.push(['_setDomainName', 'pousadasantanna.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function(){
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
