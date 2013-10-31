@@ -19,7 +19,7 @@ class Photo < ActiveRecord::Base
 
   validates_inclusion_of :photo_kind, in: PhotoKind.list
 
-  has_attached_file :photo, styles: { thumb: '100x100>' }
+  has_attached_file :photo, styles: { carousel: '800x', thumb: '100x' }
 
   has_enumeration_for :photo_kind, create_helpers: true, create_scopes: true
 

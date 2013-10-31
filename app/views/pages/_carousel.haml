@@ -10,9 +10,9 @@
   .carousel-inner
     -photos.each do |photo|
       -if photo == photos.first
-        .active.item= image_tag photo.photo.url
+        .active.item= image_tag photo.photo.url(:carousel)
       -else
-        .item= image_tag photo.photo.url, class: 'center'
+        .item= image_tag photo.photo.url(:carousel), class: 'center'
 
   %a.carousel-control.left{"data-slide" => "prev", href: "##{id}_carousel"} ‹
   %a.carousel-control.right{"data-slide" => "next", href: "##{id}_carousel"} ›
