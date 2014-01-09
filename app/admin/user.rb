@@ -17,7 +17,6 @@ ActiveAdmin.register User do
     attributes_table do
       row :id
       row :email
-      row('Senha criptografada') { user.encrypted_password }
       row('Contagem de logins') { user.sign_in_count }
       row('Atual login feito em') { user.current_sign_in_at }
       row('Último login feio em') { user.last_sign_in_at }
