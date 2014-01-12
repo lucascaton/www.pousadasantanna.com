@@ -30,7 +30,7 @@ ActiveAdmin.register User do
   filter :email
 
   form do |f|
-    f.inputs 'User Details' do
+    f.inputs 'Detalhes do usuário' do
       f.input :email
       f.input :password
       f.input :password_confirmation
