@@ -10,7 +10,7 @@ ActiveAdmin.register User do
   index do |user|
     column :email
 
-    default_actions
+    actions
   end
 
   show do |user|

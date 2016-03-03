@@ -14,7 +14,7 @@ ActiveAdmin.register Photo do
     column('Tipo') { |photo| photo.photo_kind_humanize }
     column('Última atualização') { |photo| l photo.updated_at }
 
-    default_actions
+    actions
   end
 
   show do |photo|
