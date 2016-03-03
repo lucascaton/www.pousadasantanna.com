@@ -1,0 +1,25 @@
+pt-BR:
+  activerecord:
+    models:
+      photo:
+        one: 'Foto'
+        other: 'Fotos'
+      user:
+        one: 'Usuário'
+        other: 'Usuários'
+
+    attributes:
+      photo:
+        photo_kind: 'Tipo'
+        photo: 'Foto'
+        photo_file_name: 'Foto (nome do arquivo)'
+        photo_content_type: 'Foto (tipo)'
+        photo_file_size: 'Foto (tamanho)'
+        photo_updated_at: 'Foto (atualizada em)'
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
+
+      user:
+        email: 'Email'
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
