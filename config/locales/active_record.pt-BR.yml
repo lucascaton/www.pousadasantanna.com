@@ -4,6 +4,9 @@ pt-BR:
       photo:
         one: 'Foto'
         other: 'Fotos'
+      website_detail:
+        one: 'Site'
+        other: 'Site'
       user:
         one: 'Usuário'
         other: 'Usuários'

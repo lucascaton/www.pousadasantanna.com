@@ -1,7 +1,12 @@
 %h2 Sobre a pousada
 %br
 
-%p= 'A <strong>Pousada Santana</strong> dispõe de várias acomodações com quartos econômicos, todos com TV e Internet via Wi-fi. Situada na pacata cidade de Roseira, à 9km do centro turistico de Aparecida-SP, em ótima localização para empresas, à 100m da Rodovia Pres. Dutra, com estacionamento próprio para autos e caminhões.'.html_safe
+%p= @website_detail.intro
 
 #about_us_photos.center
-  =image_tag 'about_us_photos.png', alt: 'Pousada Santanna', title: 'Pousada Santanna'
+  .row
+    .span6= image_tag @website_detail.photo1
+    .span6= image_tag @website_detail.photo2
+  .row
+    .span6= image_tag @website_detail.photo3
+    .span6= image_tag @website_detail.photo4

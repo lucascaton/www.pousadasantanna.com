@@ -47,15 +47,14 @@
               .span12
                 = bootstrap_flash
 
-
       .row-fluid
         .span8.offset2
           .center
             #image_header= link_to image_tag('header.png'), root_path
 
             .well
-              %h2.headline Segurança, tranquilidade e ambiente familiar.
-              %h4 Seja bem-vindo à melhor pousada da região.
+              %h2.headline2= @website_detail.headline1
+              %h4= @website_detail.headline2
 
           = yield
 
