@@ -4,9 +4,11 @@ pt-BR:
       photo:
         one: 'Foto'
         other: 'Fotos'
+
       website_detail:
         one: 'Site'
         other: 'Site'
+
       user:
         one: 'Usuário'
         other: 'Usuários'
@@ -21,6 +23,15 @@ pt-BR:
         photo_updated_at: 'Foto (atualizada em)'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
+
+      website_detail:
+        headline1: 'Chamada 1'
+        headline2: 'Chamada 2'
+        intro: 'Introdução'
+        photo1: 'Foto 1'
+        photo2: 'Foto 3'
+        photo3: 'Foto 3'
+        photo4: 'Foto 4'
 
       user:
         email: 'Email'
