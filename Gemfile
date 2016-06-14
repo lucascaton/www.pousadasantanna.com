@@ -15,8 +15,7 @@ gem 'paperclip'
 gem 'pg'
 gem 'rails-i18n'
 gem 'sass-rails'
-# gem 'therubyracer'
-# gem 'turbolinks'
+gem 'therubyracer'
 gem 'uglifier'
 
 group :development do
