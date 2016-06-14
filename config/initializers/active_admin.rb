@@ -14,7 +14,7 @@ ActiveAdmin.setup do |config|
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
-  # Note: Recommended image height is 21px to properly fit in the header
+  # Note: Aim for an image that's 21px high so it fits in the header.
   #
   # config.site_title_image = '/images/logo.png'
 
@@ -63,6 +63,11 @@ ActiveAdmin.setup do |config|
   # ensure that there is a user with proper rights. You can use
   # CanCanAdapter or make your own. Please refer to documentation.
   # config.authorization_adapter = ActiveAdmin::CanCanAdapter
+
+  # In case you prefer Pundit over other solutions you can here pass
+  # the name of default policy class. This policy will be used in every
+  # case when Pundit is unable to find suitable policy.
+  # config.pundit_default_policy = "MyDefaultPunditPolicy"
 
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = 'Ability'

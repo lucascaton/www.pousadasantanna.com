@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160303232831) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "active_admin_comments", force: true do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
     t.string   "resource_id",   null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160303232831) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "photos", force: true do |t|
+  create_table "photos", force: :cascade do |t|
     t.string   "photo_kind"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160303232831) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20160303232831) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "website_details", force: true do |t|
+  create_table "website_details", force: :cascade do |t|
     t.string   "headline1"
     t.string   "headline2"
     t.text     "intro"

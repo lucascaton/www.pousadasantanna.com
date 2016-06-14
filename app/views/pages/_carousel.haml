@@ -1,18 +1,23 @@
 %h2= title
 %br
 
-.carousel.slide{ id: "#{id}_carousel" }
+.carousel.slide{ id: "#{id}_carousel", 'data-ride' => 'carousel' }
   %ol.carousel-indicators
-    %li.active{"data-slide-to" => 0, "data-target" => "##{id}_carousel"}
-    -1.upto(photos.count - 1) do |n|
-      %li{"data-slide-to" => n, "data-target" => "##{id}_carousel"}
+    %li.active{ 'data-slide-to' => 0, 'data-target' => "##{id}_carousel" }
+    - 1.upto(photos.count - 1) do |n|
+      %li{ 'data-slide-to' => n, 'data-target' => "##{id}_carousel" }
 
-  .carousel-inner
+  .carousel-inner{ role: 'listbox' }
     -photos.each do |photo|
       -if photo == photos.first
         .active.item= image_tag photo.photo.url(:carousel)
       -else
         .item= image_tag photo.photo.url(:carousel), class: 'center'
 
-  %a.carousel-control.left{"data-slide" => "prev", href: "##{id}_carousel"} ‹
-  %a.carousel-control.right{"data-slide" => "next", href: "##{id}_carousel"} ›
+  %a.left.carousel-control{'data-slide' => 'prev', href: "##{id}_carousel", role: 'button'}
+    %span.glyphicon.glyphicon-chevron-left{'aria-hidden' => 'true'}
+    %span.sr-only Anterior
+
+  %a.right.carousel-control{'data-slide' => 'next', href: "##{id}_carousel", role: 'button'}
+    %span.glyphicon.glyphicon-chevron-right{'aria-hidden' => 'true'}
+    %span.sr-only Próximo\h

@@ -2,6 +2,6 @@
 
 Desenvolvido por Lucas Caton em Setembro/2010.
 
-## TODO:
+## Setup
 
-* Criar testes de aceitação
+    rake db:drop db:create db:migrate db:seed
