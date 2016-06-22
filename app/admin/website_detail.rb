@@ -36,10 +36,11 @@ ActiveAdmin.register WebsiteDetail do
       f.input :headline2
       f.input :intro
 
-      f.input :photo1, as: :file
-      f.input :photo2, as: :file
-      f.input :photo3, as: :file
-      f.input :photo4, as: :file
+      f.input :photo1, as: :file, hint: image_tag(f.object.photo1.url(:thumb))
+      f.input :photo2, as: :file, hint: image_tag(f.object.photo2.url(:thumb))
+      f.input :photo3, as: :file, hint: image_tag(f.object.photo3.url(:thumb))
+      f.input :photo4, as: :file, hint: image_tag(f.object.photo4.url(:thumb))
+
     end
 
     f.actions
