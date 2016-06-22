@@ -7,6 +7,10 @@ ActiveAdmin.register Photo do
     end
   end
 
+  action_item :new, only: :show do
+    link_to 'Nova foto', new_admin_photo_path
+  end
+
   index do
     column('ID') { |photo| link_to photo.id, admin_photo_path(photo) }
     column('Foto') { |photo| link_to image_tag(photo.photo.url(:thumb)), admin_photo_path(photo) }
