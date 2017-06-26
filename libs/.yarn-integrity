@@ -1,7 +1,5 @@
 {
-  "flags": [
-    "production"
-  ],
+  "flags": [],
   "linkedModules": [],
   "topLevelPatters": [
     "bootstrap@^3.3.7",
