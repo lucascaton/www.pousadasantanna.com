@@ -1,0 +1,55 @@
+body {
+  padding-top: 10px;
+  background: #7abcff;
+  background: -moz-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #4096ee));
+  background: -webkit-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  background: -o-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  background: radial-gradient(ellipse at center, #7abcff 0%, #60abf8 44%, #4096ee 100%); }
+
+#image_header {
+  position: relative;
+  top: 21px; }
+
+#about_us_photos {
+  margin-top: 20px; }
+
+.well {
+  background-color: #FFF; }
+
+.jumbotron {
+  background-color: #FFF; }
+
+footer {
+  color: #FFF;
+  font-size: 1.3em; }
+
+.carousel a.carousel-control {
+  color: #EEE;
+  text-decoration: none; }
+
+.carousel-indicators li {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer; }
+
+.center {
+  text-align: center;
+  margin: auto; }
+
+#form_contact_us {
+  margin-top: 50px; }
+  #form_contact_us h3 {
+    margin-bottom: 20px; }
+
+footer {
+  margin-bottom: 30px; }
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+
+  .navbar .navbar-collapse {
+    text-align: center; } }
