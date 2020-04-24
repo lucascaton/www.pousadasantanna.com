@@ -6,48 +6,62 @@ body {
   background: -webkit-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
   background: -o-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
   background: -ms-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #4096ee 100%);
-  background: radial-gradient(ellipse at center, #7abcff 0%, #60abf8 44%, #4096ee 100%); }
+  background: radial-gradient(ellipse at center, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+}
 
 #image_header {
   position: relative;
-  top: 21px; }
+  top: 21px;
+}
 
 #about_us_photos {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 #contact {
-  padding-bottom: 6em; }
+  padding-bottom: 6em;
+}
 
 .well {
-  background-color: #FFF; }
+  background-color: #FFF;
+}
 
 .jumbotron {
-  background-color: #FFF; }
+  background-color: #FFF;
+}
 
 footer {
   color: #FFF;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+}
 
 .carousel a.carousel-control {
   color: #EEE;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .carousel-indicators li {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .center {
   text-align: center;
-  margin: auto; }
+  margin: auto;
+}
 
 footer {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
-    vertical-align: top; }
+    vertical-align: top;
+  }
 
   .navbar .navbar-collapse {
-    text-align: center; } }
+    text-align: center;
+  }
+}
