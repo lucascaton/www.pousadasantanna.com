@@ -10,6 +10,8 @@ body {
 }
 
 #image_header {
+  display: flex;
+  justify-content: center;
   position: relative;
   top: 21px;
 }
